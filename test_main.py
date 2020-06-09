@@ -26,7 +26,9 @@ def test_health(client):
     response = client.get('/')
     assert response.status_code == 200
     assert response.json == 'Healthy'
-    assert False
+#   assert False  
+#   -- tested with False, build failed in CodePipeline.
+#   -- tested commenting False, build was successful.
 
 
 def test_auth(client):
